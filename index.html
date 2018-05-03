@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Working File...</title>
+    <link rel="stylesheet" type="text/css" href="CSs/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.google.com/jsapi?key=ABQIAAAAM5WRXPMrqYvX6b4Xb7EZpxSeEWdgYc2hJ2roZCm3pKElCbTU5BSm-LvChjUku9yw6i8tI0Srj_P91w" type="text/javascript"></script>
+    <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/keyObjects.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <button id="play">Play</button>
+    <button id="stop">Stop</button>
+    <div id="piano">
+        <div id="pianoBody">
+            <div id="littleRedLine"></div>
+            <div id="o00" class="octave">
+                <div id="A00" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B00" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="AS00" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o0" class="octave">
+                <div id="C0" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">1</div>
+                </div>
+                <div id="D0" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E0" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F0" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G0" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A0" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B0" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS0" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS0" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS0" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS0" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS0" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o1" class="octave">
+                <div id="C1" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">2</div>
+                </div>
+                <div id="D1" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E1" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F1" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G1" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A1" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B1" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS1" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS1" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS1" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS1" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS1" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o2" class="octave">
+                <div id="C2" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">3</div>
+                </div>
+                <div id="D2" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E2" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F2" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G2" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A2" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B2" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS2" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS2" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS2" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS2" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS2" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o3" class="octave">
+                <a id="middleC">
+                    <div id="C3" class="key white">
+                        <div class="keyname">C</div>
+                        <div class="oN">4</div>
+                    </div>
+                    <div id="D3" class="key white">
+                        <div class="keyname">D</div>
+                    </div>
+                    <div id="E3" class="key white">
+                        <div class="keyname">E</div>
+                    </div>
+                    <div id="F3" class="key white">
+                        <div class="keyname">F</div>
+                    </div>
+                    <div id="G3" class="key white">
+                        <div class="keyname">G</div>
+                    </div>
+                    <div id="A3" class="key white">
+                        <div class="keyname">A</div>
+                    </div>
+                    <div id="B3" class="key white">
+                        <div class="keyname">B</div>
+                    </div>
+                    <div class="flats">
+                        <div id="CS3" class="key black">
+                            <div class="keyname">C# == Db</div>
+                        </div>
+                        <div id="DS3" class="key black">
+                            <div class="keyname">D# == Eb</div>
+                        </div>
+                        <div id="FS3" class="key black">
+                            <div class="keyname">F# == Gb</div>
+                        </div>
+                        <div id="GS3" class="key black">
+                            <div class="keyname">G# == Ab</div>
+                        </div>
+                        <div id="AS3" class="key black">
+                            <div class="keyname">A# == Bb</div>
+                        </div>
+                    </div>
+            </div>
+            <div id="o4" class="octave">
+                <div id="C4" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">5</div>
+                </div>
+                <div id="D4" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E4" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F4" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G4" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A4" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B4" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS4" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS4" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS4" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS4" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS4" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o5" class="octave">
+                <div id="C5" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">6</div>
+                </div>
+                <div id="D5" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E5" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F5" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G5" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A5" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B5" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS5" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS5" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS5" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS5" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS5" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o6" class="octave">
+                <div id="C6" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">7</div>
+                </div>
+                <div id="D6" class="key white">
+                    <div class="keyname">D</div>
+                </div>
+                <div id="E6" class="key white">
+                    <div class="keyname">E</div>
+                </div>
+                <div id="F6" class="key white">
+                    <div class="keyname">F</div>
+                </div>
+                <div id="G6" class="key white">
+                    <div class="keyname">G</div>
+                </div>
+                <div id="A6" class="key white">
+                    <div class="keyname">A</div>
+                </div>
+                <div id="B6" class="key white">
+                    <div class="keyname">B</div>
+                </div>
+                <div class="flats">
+                    <div id="CS6" class="key black">
+                        <div class="keyname">C# == Db</div>
+                    </div>
+                    <div id="DS6" class="key black">
+                        <div class="keyname">D# == Eb</div>
+                    </div>
+                    <div id="FS6" class="key black">
+                        <div class="keyname">F# == Gb</div>
+                    </div>
+                    <div id="GS6" class="key black">
+                        <div class="keyname">G# == Ab</div>
+                    </div>
+                    <div id="AS6" class="key black">
+                        <div class="keyname">A# == Bb</div>
+                    </div>
+                </div>
+            </div>
+            <div id="o7" class="octave">
+                <div id="C7" class="key white">
+                    <div class="keyname">C</div>
+                    <div class="oN">8</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 	//audio -->
+    <div id="pianoStrings">
+        <audio id="tone-A00" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS00" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B00" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/00B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B0" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/0B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B1" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/1B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B2" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/2B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B3" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/3B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B4" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/4B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B5" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/5B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6C.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-CS6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Cs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Cs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-D6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6D.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6D.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-DS6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Ds.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Ds.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-E6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6E.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6E.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-F6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6F.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6F.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-FS6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Fs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Fs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-G6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6G.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6G.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-GS6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Gs.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6Gs.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-A6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6A.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6A.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-AS6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6As.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6As.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-B6" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6B.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/6B.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tone-C7" preload="auto" controls>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/7C.ogg" type="audio/ogg"></source>
+            <source src="http://pianosounds.pixelass.com/tones/grand-piano/7C.mp3" type="audio/mpeg"></source>
+        </audio>
+    </div>
+    <script>
+    var tones = [`A`, `AS`, `B`, `C`, `CS`, `D`, `DS`, `E`, `F`, `FS`, `G`, `GS`];
+    var majorScalePattern = [0, 2, 4, 5, 7, 9, 11];
+    var majorScale = [];
+    var selectedKey = prompt(`select a key`).toUpperCase();
+    var selectedIndex = tones.indexOf(selectedKey);
+    var keyboard = [];
+    var kbCounter = 0;
+
+    for (var i = 1; i < 9; i++) {
+        if (i === 8) {
+            for (var j = 0; j < 4; j++) {
+                keyboard[kbCounter++] = tones[j] + i;
+            };
+        } else {
+            for (var j = 0; j < tones.length; j++) {
+                keyboard[kbCounter++] = tones[j] + i;
+            };
+        };
+    };
+    for (var i = 0; i < keyboard.length; i++) {};
+
+    var findMajorScale = function(selectedIndex) {
+        for (var i = 0; i < majorScalePattern.length; i++) {
+            var index = majorScalePattern[i];
+            majorScale.push(keyboard[index + selectedIndex])
+        }
+        console.log(majorScale)
+        return majorScale
+    };
+    findMajorScale(selectedIndex)
+
+    var outputMajor = [];
+    var outputMajorSequence = [];
+
+    var getNotes = function(input, arr) {
+        input--;
+        for (var i = 0; i <= 6; i++) {
+            if (i === 0 || i === 2 || i === 4) {
+                if (i + input < majorScale.length) {
+                    arr.push(majorScale[i + input])
+                } else if ((i + input) >= majorScale.length) {
+                    var newInput = (i + input) - 7;
+                    var note = majorScale[newInput];
+                    var octave = Number(note.substr(note.length - 1));
+                    octave++;
+                    var newNote = note.substr(0, note.length - 1) + octave;
+                    arr.push(newNote);
+                }
+            }
+        }
+        arr.unshift(arr[0]);
+        return arr;
+    }
+
+    for (var i = 0; i < 4; i++) {
+        var input = prompt('select a number between 1 and 7');
+        var arr = [];
+        getNotes(input, arr);
+        outputMajor.push(arr);
+    }
+
+    for (var i = 0; i < outputMajor.length; i++) {
+        for (var j = 0; j <= 3; j++) {
+            var note = outputMajor[i][j];
+
+            if (j === 0) {
+                var octave = Number(note.substr(note.length - 1)) + 1;
+                var newNote = note.substr(0, note.length - 1) + octave;
+                outputMajorSequence.push(newNote)
+            } else {
+                var octave = Number(note.substr(note.length - 1)) + 2;
+                var newNote = note.substr(0, note.length - 1) + octave;
+                outputMajorSequence.push(newNote);
+            }
+        }
+    }
+
+
+    // console.log(outputMajor);
+    // console.log(outputMajorSequence);
+
+    window.playheadPosition = 0;
+
+    var playPiano = function() {
+        window.playback = setInterval(function() {
+            var note = outputMajorSequence[playheadPosition];
+            play_multi_sound('tone-' + note);
+            console.log(note);
+            playheadPosition++;
+
+            if (playheadPosition >= outputMajorSequence.length) playheadPosition = 0;
+        }, 240);
+    }
+
+    $('#play').click(function() {
+        if (!window.playback) {
+            console.log("playing");
+            playPiano();
+        }
+    });
+
+    $('#stop').click(function() {
+        clearInterval(window.playback);
+        window.playback = null;
+        window.playheadPosition = 0;
+    });
+
+    </script>
+</body>
+
+</html>
