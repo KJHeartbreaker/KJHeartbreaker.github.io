@@ -13,6 +13,23 @@
 </head>
 
 <body>
+    <div class="dropdown">
+        <button onclick="keySelect()" class="dropbtn">Select a key...</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a>A</a>
+            <a>As</a>
+            <a>B</a>
+            <a>C</a>
+            <a>Cs</a>
+            <a>D</a>
+            <a>Ds</a>
+            <a>E</a>
+            <a>F</a>
+            <a>Fs</a>
+            <a>G</a>
+            <a>Gs</a>
+        </div>
+    </div>
     <button id="play">Play</button>
     <button id="stop">Stop</button>
     <div id="piano">
@@ -327,7 +344,7 @@
             </div>
         </div>
     </div>
-    <!-- 	//audio -->
+    <!--    //audio -->
     <div id="pianoStrings">
         <audio id="tone-A00" preload="auto" controls>
             <source src="http://pianosounds.pixelass.com/tones/grand-piano/00A.ogg" type="audio/ogg"></source>
@@ -686,22 +703,25 @@
     var tones = [`A`, `AS`, `B`, `C`, `CS`, `D`, `DS`, `E`, `F`, `FS`, `G`, `GS`];
     var majorScalePattern = [0, 2, 4, 5, 7, 9, 11];
     var majorScale = [];
-    var selectedKey = prompt(`select a key`).toUpperCase();
+    var selectedKey = keySelect.value;
     var selectedIndex = tones.indexOf(selectedKey);
     var keyboard = [];
     var kbCounter = 0;
 
-    for (var i = 1; i < 9; i++) {
-        if (i === 8) {
-            for (var j = 0; j < 4; j++) {
-                keyboard[kbCounter++] = tones[j] + i;
-            };
-        } else {
-            for (var j = 0; j < tones.length; j++) {
-                keyboard[kbCounter++] = tones[j] + i;
+    var keyboardMap = function() {    
+        for (var i = 1; i < 9; i++) {
+            if (i === 8) {
+                for (var j = 0; j < 4; j++) {
+                    keyboard[kbCounter++] = tones[j] + i;
+                };
+            } else {
+                for (var j = 0; j < tones.length; j++) {
+                    keyboard[kbCounter++] = tones[j] + i;
+                };
             };
         };
-    };
+    }
+    
     for (var i = 0; i < keyboard.length; i++) {};
 
     var findMajorScale = function(selectedIndex) {
@@ -734,13 +754,16 @@
         }
         arr.unshift(arr[0]);
         return arr;
+        findMelody();
     }
 
-    for (var i = 0; i < 4; i++) {
-        var input = prompt('select a number between 1 and 7');
-        var arr = [];
-        getNotes(input, arr);
-        outputMajor.push(arr);
+    function findMelody() {
+        for (var i = 0; i < 4; i++) {
+            var input = prompt('select a number between 1 and 7');
+            var arr = [];
+            getNotes(input, arr);
+            outputMajor.push(arr);
+        }
     }
 
     for (var i = 0; i < outputMajor.length; i++) {
@@ -776,6 +799,24 @@
         }, 240);
     }
 
+    function keySelect() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+     
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
     $('#play').click(function() {
         if (!window.playback) {
             console.log("playing");
@@ -788,8 +829,8 @@
         window.playback = null;
         window.playheadPosition = 0;
     });
-
     </script>
 </body>
+
 
 </html>

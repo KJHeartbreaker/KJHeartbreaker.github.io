@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+
+<style>
+
+body {
+	font-family: arial, sans-serif;
+}
+
+.question, .feedback-incorrect, .completed {
+	display: none;
+} 
+
+.feedback-incorrect {
+	margin-top: 30px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="questionContainer">
+	<p>A few questions about AC/DC...</p>
+
+	<div class="question">
+		The original vocalist in AC/DC was:
+		<br>
+		<br>
+	  	<input type="radio" name="vocalist" class="option" id="vocalist-1" value="incorrect">
+	  	<label for="vocalist-1">Bon Scott</label><br>
+	  	<input type="radio" name="vocalist" class="option" id="vocalist-2" value="correct">
+	  	<label for="vocalist-2">Dave Evans</label><br>
+	  	<input type="radio" name="vocalist" class="option" id="vocalist-3" value="incorrect">
+	  	<label for="vocalist-3">Brian Johnson</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		Which music video featured dozens of extras that shaved the AC/DC logo into their hair:
+		<br>
+		<br>
+	  	<input type="radio" name="video" class="option" id="video-1" value="incorrect">
+	  	<label for="video-1">Who Made Who</label><br>
+	  	<input type="radio" name="video" class="option" id="video-2" value="incorrect">
+	  	<label for="video-2">Rock or Bust</label><br>
+	  	<input type="radio" name="video" class="option" id="video-3" value="correct">
+	  	<label for="video-3">Are You Ready</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		Which member of AC/DC was arrested and charged with murder for hire? 
+		<br>
+		<br>
+	  	<input type="radio" name="malice" class="option" id="murder-1" value="incorrect">
+	  	<label for="murder-1">Angus Young</label><br>
+	  	<input type="radio" name="malice" class="option" id="murder-2" value="incorrect">
+	  	<label for="murder-2">Cliff Williams</label><br>
+	  	<input type="radio" name="malice" class="option" id="murder-3" value="correct">
+	  	<label for="murder-3">Phil Rudd</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		To date, the highest selling AC/DC album is:
+		<br>
+		<br>
+	  	<input type="radio" name="album" class="option" id="sales-1" value="incorrect">
+	  	<label for="sales-1">Black Ice</label><br>
+	  	<input type="radio" name="album" class="option" id="sales-2" value="correct">
+	  	<label for="sales-2">Back in Black</label><br>
+	  	<input type="radio" name="album" class="option" id="sales-3" value="incorrect">
+	  	<label for="sales-3">Highway to Hell</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		Which AC/DC song featured the bagpipes? 
+		<br>
+		<br>
+	  	<input type="radio" name="bagpipes" class="option" id="pipes-1" value="incorrect">
+	  	<label for="pipes-1">You Shook Me All Night Long</label><br>
+	  	<input type="radio" name="bagpipes" class="option" id="pipes-2" value="incorrect">
+	  	<label for="pipes-2">If You Want Blood (You've Got It)</label><br>
+	  	<input type="radio" name="bagpipes" class="option" id="pipes-3" value="correct">
+	  	<label for="pipes-3">It's a Long Way to the Top (If You Wanna Rock 'n' Roll)</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		Who Made Who, a compilation of new material, as well as classic material, served as the soundtrack to which film?  
+		<br>
+		<br>
+	  	<input type="radio" name="soundtrack" class="option" id="flop-1" value="correct">
+	  	<label for="flop-1">Maximum Overdrive</label><br>
+	  	<input type="radio" name="soundtrack" class="option" id="flop-2" value="incorrect">
+	  	<label for="flop-2">Iron Man</label><br>
+	  	<input type="radio" name="soundtrack" class="option" id="flop-3" value="incorrect">
+	  	<label for="flop-3">Last Action Hero</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		The first album to feature the classic AC/DC lightning bolt logo was:
+		<br>
+		<br>
+	  	<input type="radio" name="lightning" class="option" id="logo-1" value="incorrect">
+	  	<label for="logo-1">The Razor's Edge</label><br>
+	  	<input type="radio" name="lightning" class="option" id="logo-2" value="correct">
+	  	<label for="logo-2">Let There Be Rock</label><br>
+	  	<input type="radio" name="lightning" class="option" id="logo-3" value="incorrect">
+	  	<label for="logo-3">High Voltage</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		After receiving hundreds of prank phone calls, Norman and Marilyn White filed a $250,000 lawsuit in Lake County, Illinois against Atlantic Records alleging that their phone number was included in the lyrics of the AC/DC classic <em>Dirty Deeds Done Dirt Cheap</em>. According to the band, this was accidental, and the digits actually were a reference to:
+		<br>
+		<br>
+	  	<input type="radio" name="362436" class="option" id="lawsuit-1" value="correct">
+	  	<label for="lawsuit-1">The Hourglass Figure</label><br>
+	  	<input type="radio" name="362436" class="option" id="lawsuit-2" value="incorrect">
+	  	<label for="lawsuit-2">Tasmanian urban legend</label><br>
+	  	<input type="radio" name="362436" class="option" id="lawsuit-3" value="incorrect">
+	  	<label for="lawsuit-3">Geographical coordinates to Bon Scott's hometown in Scotland</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		According to a 1991 interview with Guitar World, Angus Young claims that one of the songs off of The Razor's Edge was about Donald Trump. Which one?   
+		<br>
+		<br>
+	  	<input type="radio" name="trump" class="option" id="fortyFive-1" value="incorrect">
+	  	<label for="fortyFive-1">Fire Your Guns</label><br>
+	  	<input type="radio" name="trump" class="option" id="fortyFive-2" value="incorrect">
+	  	<label for="fortyFive-2">Money Talks</label><br>
+	  	<input type="radio" name="trump" class="option" id="fortyFive-3" value="correct">
+	  	<label for="fortyFive-3">Mistress for Christmas</label><br>
+	  	<br>
+	  	<br>
+	</div>
+
+	<div class="question">
+		Angus Young is synonymous with which type of guitar? 
+		<br>
+		<br>
+	  	<input type="radio" name="guitar" class="option" id="devilish-1" value="incorrect">
+	  	<label for="devilish-1">Fender Telecaster</label><br>
+	  	<input type="radio" name="guitar" class="option" id="devilish-2" value="correct">
+	  	<label for="devilish-2">Gibson SG</label><br>
+	  	<input type="radio" name="guitar" class="option" id="devilish-3" value="incorrect">
+	  	<label for="devilish-3">Gretsch Falcon</label><br>
+	  	<br>
+	  	<br>
+	</div>	
+
+	<div>
+		<button id="submit">Submit</button>
+	</div>
+</div>
+
+<div class="completed">
+	Congratulations!
+	<br><br>
+	By answering <span class="right-answer"></span> out of <span class="total-questions"></span>, you achieve a final score of <span class="final-score"></span>%!
+	<br><br>
+	Hopefully, you have learned a little bit more about AC/DC, and that makes you even cooler than you already were. 
+</div>
+
+<div class="feedback-incorrect">
+	The correct answer is: <span class="correct-answer"></span> 
+	<br>
+	Your selection is: <span class="user-select"></span> 
+	<div>
+		<br>
+		<br>
+		<button id="next">Next</button>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+// Create a multiple choice quiz, using radio buttons and a submit button.
+// There is 3 questions, when the user submits and correctly answers the question, the first question hides and the next shows.  If the user answers incorrectly they get an alert you are wrong.
+// When all questions are complete, alert you are done.
+
+
+(function() {
+
+	var quizQuestion = document.querySelectorAll('.question');
+	var allDone = document.querySelector('.completed');
+	var questionContainer = document.querySelector('.questionContainer');
+	var feedbackContainer = document.querySelector('.feedback-incorrect');
+	var correctAnswer = document.querySelector('.correct-answer');
+	var userSelection = document.querySelector('.user-select');
+	var rightAnswer = document.querySelector('.right-answer');
+	var finalScore = document.querySelector('.final-score');
+	var totalQuestions = document.querySelector('.total-questions');
+	var questionLength = quizQuestion.length;
+	var correctScore = 0;
+	var i = 0;
+
+	function displayQuestion() {
+		if (i < questionLength) {
+			for (var j = 0; j < questionLength; j++) {
+				quizQuestion[j].style.display = 'none';
+			}
+			quizQuestion[i].style.display = 'block';
+		} else {
+			questionContainer.style.display = 'none';
+			rightAnswer.innerHTML = correctScore;
+			totalQuestions.innerHTML = questionLength;
+			finalScore.innerHTML = Math.floor((correctScore / questionLength) * 100);
+			allDone.style.display = 'block';
+		}
+	};
+
+	function validateSelection() {
+		var validation, userSelect;
+
+		var answersInput = quizQuestion[i].getElementsByTagName('input');
+		
+		var correctChoiceId = quizQuestion[i].querySelector('input[value="correct"]').id;
+		var correctResponse = document.querySelector('label[for=' +correctChoiceId+ ']').innerHTML;
+
+		for (var a = 0; a < answersInput.length; a++) {
+			if (answersInput[a].checked == true) {
+				var answerID = answersInput[a].id;
+				var validation = answersInput[a].getAttribute('value'); 
+				userSelect = document.querySelector('label[for=' + answerID + ']').innerHTML;  
+				break;
+			} 
+		}
+
+		//alert and reset question
+		if (validation === "incorrect") {
+			// alert('This is not the correct answer!');
+			correctAnswer.innerHTML = correctResponse;
+			userSelection.innerHTML = userSelect;
+			feedbackContainer.style.display = 'block';
+			document.getElementById('submit').style.display = 'none';
+			for (var b = 0; b < answersInput.length; b++) {
+				answersInput[b].checked = false;
+			}
+			return false;
+		}
+		
+		// if no selection is made
+		if (!validation) {
+			alert('Please make a selection!');
+			return false;
+		}
+
+		correctScore++;	
+		return true
+	};
+
+
+	document.getElementById('submit').onclick = function() {
+		if (validateSelection()) {			
+			i++;
+			displayQuestion();
+		}
+	};
+
+	document.getElementById('next').onclick = function() {	
+		feedbackContainer.style.display = 'none';
+		i++;
+		displayQuestion();
+		document.getElementById('submit').style.display = 'block';
+	};
+
+	// When the quiz is completed, alert the user. 
+
+	displayQuestion();
+})();
+</script>
+
+</body>
+</html>
