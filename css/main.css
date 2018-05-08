@@ -1,33 +1,42 @@
 @import url(http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic,latin);
 
-html, body {
-	height: 100%;
-	font-family: Philosopher, Tahoma;
-  background-color: #F2F2F2;
+html,
+body {
+    height: 100%;
+    font-family: Philosopher, Tahoma;
+    background-color: #F2F2F2;
 }
 
 body {
-		overflow-y: hidden;
-		padding-top: 20px;
-		width: 4705px;
+    overflow-y: hidden;
+    padding-top: 20px;
+    width: 4705px;
 }
 
 h1 {
-	font-size: 40px;
+    font-size: 40px;
 }
 
-a {text-decoration: none; color: #000; cursor: pointer;}
-a:hover {color: #FFC0CB;}
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #FFC0CB;
+}
 
 nav.left {
-	position: fixed;
-	left: 0px;
-	margin: 0px 0px 0px 20px;
+    position: fixed;
+    left: 0px;
+    margin: 0px 0px 0px 20px;
 }
+
 nav.right {
-	position: fixed;
-	right: 0px;
-	margin: 0px 20px 0px 0px;
+    position: fixed;
+    right: 0px;
+    margin: 0px 20px 0px 0px;
 }
 
 #piano {
@@ -39,14 +48,14 @@ nav.right {
     position: absolute;
     text-align: center;
     top: 350px;
-		width: 4685px;
-		padding: 10px 10px 13px;
+    width: 4685px;
+    padding: 10px 10px 13px;
 }
 
 #pianoBody {
-	width: 100%;
-	position: relative;
-	float: left;
+    width: 100%;
+    position: relative;
+    float: left;
 }
 
 #littleRedLine {
@@ -60,106 +69,110 @@ nav.right {
 }
 
 .octave {
-	position: relative;
-	float: left;
-} 
+    position: relative;
+    float: left;
+}
 
 .white {
-	float: left;
-	width: 88px;
-	height: 460px;
-  background-color: #F4F4F4;
-  border: 1px solid #626262;
-  position: relative;
-	-moz-border-radius: 0 0 15px 15px;
-	border-radius: 0 0 15px 15px; 
-	background-image: -webkit-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	-webkit-box-shadow: 0 -10px 2px 0px #838383 none, 0 -60px 40px 10px #EEEEEE inset;
-	
-	background-image: -moz-linear-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	-moz-box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
-	
-	background-image: -gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
+    float: left;
+    width: 88px;
+    height: 460px;
+    background-color: #F4F4F4;
+    border: 1px solid #626262;
+    position: relative;
+    -moz-border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
+    background-image: -webkit-gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    -webkit-box-shadow: 0 -10px 2px 0px #838383 none, 0 -60px 40px 10px #EEEEEE inset;
+
+    background-image: -moz-linear-gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    -moz-box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
+
+    background-image: -gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
 }
 
 div.white:active,
 div.white.pressed {
-  border: 1px solid #343434;
-	background-image: -webkit-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	-webkit-box-shadow: 0 -5px 20px -3px #272927 inset;
-	
-	background-image: -moz-linear-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	-moz-box-shadow: 0 -5px 2px 0px #838383 inset,0 -3px 20px -3px #272927 inset;
-	
-	background-image: -gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
-	box-shadow: 0 -5px 20px -3px #272927 inset;
+    border: 1px solid #343434;
+    background-image: -webkit-gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    -webkit-box-shadow: 0 -5px 20px -3px #272927 inset;
+
+    background-image: -moz-linear-gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    -moz-box-shadow: 0 -5px 2px 0px #838383 inset, 0 -3px 20px -3px #272927 inset;
+
+    background-image: -gradient(center bottom, #FFFFFF 90%, #CCCCCC 100%);
+    box-shadow: 0 -5px 20px -3px #272927 inset;
 }
 
 .black {
-	float: left;
-	width: 44px;
-	height: 320px;
-  background-color: #000000;
-  border-bottom: 2px solid #000;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-  position: absolute;
-  top: 6px;
-  z-index: 100;
-	-moz-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px; 
-	border-top: 0px;
-	-moz-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
-	-webkit-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
-	box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+    float: left;
+    width: 44px;
+    height: 320px;
+    background-color: #000000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    position: absolute;
+    top: 6px;
+    z-index: 100;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    border-top: 0px;
+    -moz-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+    -webkit-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+    box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
 }
 
 div.black:active,
 div.black.pressed {
-  border: 1px solid #CECECE;
-  border-top: 1px solid #626262;
-	-moz-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
-	-webkit-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
-	box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+    border: 1px solid #CECECE;
+    border-top: 1px solid #626262;
+    -moz-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+    -webkit-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+    box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
 }
 
-div.flats {
-
-}
+div.flats {}
 
 div.flats :nth-child(1) {
-	margin-left: 67px;
+    margin-left: 67px;
 }
+
 div.flats :nth-child(2) {
-	margin-left: 157px;
+    margin-left: 157px;
 }
+
 div.flats :nth-child(3) {
-	margin-left: 338px;
+    margin-left: 338px;
 }
+
 div.flats :nth-child(4) {
-	margin-left: 428px;
+    margin-left: 428px;
 }
+
 div.flats :nth-child(5) {
-	margin-left: 517px;
+    margin-left: 517px;
 }
 
 
 #toggleKeyNames,
 #toggleKeyboardKeysNames {
-	font-size: 24px;
-	font-weight: bold;
-	text-decoration: none;
-	cursor: pointer;
-	display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
 }
+
 #toggleKeyNames.on {
-	color: #FFD700;
-	text-shadow: 1px 1px 0 #7E6D1F;
+    color: #FFD700;
+    text-shadow: 1px 1px 0 #7E6D1F;
 }
+
 #toggleKeyboardKeysNames.on {
-	color: #FA8072;
-	text-shadow: 1px 1px 0 #B31706;
+    color: #FA8072;
+    text-shadow: 1px 1px 0 #B31706;
 }
 
 .keyname,
@@ -169,45 +182,45 @@ div.flats :nth-child(5) {
 }
 
 .white .keyname {
-	color: #FFD700;
-	text-shadow: 2px 2px 0 #7E6D1F;
+    color: #FFD700;
+    text-shadow: 2px 2px 0 #7E6D1F;
 }
+
 .white .kbkeyname {
-	color: #FA8072;
-	text-shadow: 2px 2px 0 #B31706;
+    color: #FA8072;
+    text-shadow: 2px 2px 0 #B31706;
 }
+
 .black .keyname {
-  font-size: 1.6em;
-	margin: 233px 0 0 0;
-	color: #FFD700;
-	text-shadow: 1px 1px 0 #7E6D1F;
+    font-size: 1.6em;
+    margin: 233px 0 0 0;
+    color: #FFD700;
+    text-shadow: 1px 1px 0 #7E6D1F;
 }
 
 .black .kbkeyname {
-  font-size: 1.6em;
-	margin: 233px 0 0 0;
-	color: #FA8072;
-	text-shadow: 1px 1px 0 #B31706;
+    font-size: 1.6em;
+    margin: 233px 0 0 0;
+    color: #FA8072;
+    text-shadow: 1px 1px 0 #B31706;
 }
 
 div.black div.keyname,
 div.black div.kbkeyname {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
-#Volume {
-
-}
+#Volume {}
 
 #switchLight.off {
-	color: #fff;
+    color: #fff;
 }
 
 #pianoStrings {
-	position: fixed;
-	bottom: 10px;
-	left: 20px;
-	display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    display: none;
 }
 
 .oN {
@@ -217,4 +230,48 @@ div.black div.kbkeyname {
     margin: 0 0 0 0;
     position: absolute;
     display: none;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd
+}
+
+.show {
+    display: block;
 }
