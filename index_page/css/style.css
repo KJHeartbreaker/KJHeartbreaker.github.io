@@ -1,0 +1,24 @@
+
+
+.wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+p {
+	color: red;
+	font-size: 1em;
+}
+
+#aboutMe {
+	min-height: 300px;
+	background-color: aliceblue;
+	width: 100%;
+}
+
+.box {
+	min-height: 250px;
+	width: 100%;
+	background-color: red;
+}
+
